@@ -1,0 +1,44 @@
+.input{
+    background: #FFFFFF;
+    border: 2px solid #8FDDC1;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+
+    margin-bottom: 20px;
+    padding: 10px 25px;
+
+    width: 500px;
+}
+
+.input::placeholder{
+    color: #000 !important;
+}
+
+.input__check{
+    -webkit-appearance: none;
+
+    width: 20px;
+    height: 20px;
+}
+
+.input__check::before{
+    content: attr(attrValue);
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 2px solid #8FDDC1;
+    border-radius: 4px;
+    transition: .5s;
+
+    cursor: pointer;
+}
+
+.input__check:checked::before{
+    background: #8FDDC1;
+}

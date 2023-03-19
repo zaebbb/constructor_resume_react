@@ -1,0 +1,14 @@
+.image__profile{
+    margin-top: 20px;
+
+    height: 300px;
+    width: 250px;
+    object-fit: cover;
+
+    border: 2px dashed #8FDDC1;
+    border-radius: 10px;
+}
+
+.image__drag{
+    opacity: .5;
+}

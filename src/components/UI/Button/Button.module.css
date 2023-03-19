@@ -1,0 +1,31 @@
+.button{
+    margin-top: 20px;
+    padding: 10px 0;
+
+    width: 250px;
+
+    background: #8FDDC1;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    border: none;
+
+    transition: .5s;
+
+    cursor: pointer;
+}
+
+.button *{
+    color: #000;
+}
+
+.button:hover{
+    transform: translateY(-3px);
+}
+
+.button:disabled{
+    opacity: .5;
+}
