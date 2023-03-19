@@ -52,3 +52,15 @@ img {
 b{
     font-weight: 600;
 }
+
+@media (max-width: 700px){
+    .content{
+        padding: 40px 50px 0;
+    }
+}
+
+@media (max-width: 600px){
+    .content{
+        padding: 10px 10px 0;
+    }
+}

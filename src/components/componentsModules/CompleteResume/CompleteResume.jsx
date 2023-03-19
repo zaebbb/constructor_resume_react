@@ -136,21 +136,26 @@ const CompleteResume = ({printRef}) => {
                     <Paragraph><b>Конец обучения: </b>{formatDate(education.end)}</Paragraph>
                 </div>
 
-                <div className={styles.content__resume}>
-                    <SubHead>Социальные сети</SubHead>
+                {
+                    contacts.socialLinks.length ?
+                        <div className={styles.content__resume}>
+                            <SubHead>Социальные сети</SubHead>
 
-                    <div className={styles.social__links}>
-                        <Flex flexWrap={'wrap'}>
-                            {
-                                contacts.socialLinks.map(socialLink =>
-                                    <div className={styles.social__link} key={socialLink.id}>
-                                        <A link={socialLink.link} target={'_blank'}>{upperLetter(socialLink.title)}</A>
-                                    </div>
-                                )
-                            }
-                        </Flex>
-                    </div>
-                </div>
+                            <div className={styles.social__links}>
+                                <Flex flexWrap={'wrap'}>
+                                    {
+                                        contacts.socialLinks.map(socialLink =>
+                                            <div className={styles.social__link} key={socialLink.id}>
+                                                <A link={socialLink.link} target={'_blank'}>{upperLetter(socialLink.title)}</A>
+                                            </div>
+                                        )
+                                    }
+                                </Flex>
+                            </div>
+                        </div>
+                        : ''
+                }
+
 
                 {isBtn ? <Button onClick={() => downloadPdf()}>Сохранить</Button> : ''}
                 {!isBtn ? <Copyright /> : ''}
