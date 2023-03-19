@@ -14,7 +14,7 @@ const Main = () => {
     
     return (
         <>
-            <Flex>
+            <Flex flexWrap={'wrap'}>
                 <div className={'main__content'}>
                     <Head>Конструктор резюме</Head>
                     <Paragraph>Создай свое резюме по готовому шаблону!</Paragraph>
